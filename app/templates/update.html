@@ -33,33 +33,7 @@
     </div>
 
 
-    <div class="container mt-3">
-        <div class="table-responsive">
-            <table class="table table-bordered table-stripped text-center shadow">
-                <thead class="bg-secondary">
-                    <tr>
-                        <th>id</th>
-                        <th>name</th>
-                        <th>update</th>
-                        <th>delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {% for crud in cruds %}
-                    <tr>
-                        <td>{{crud.id}}</td>
-                        <td>{{crud.name}}</td>
-                        <td><a href="{% url 'update' crud.id %}" class="btn btn-sm btn-warning">update</a></td>
-                        <td><form action="{% url 'delete' crud.id %}" method="POST" class="d-inline-block">
-                                        {% csrf_token %}
-                                        <input type="submit" class="btn btn-danger btn-sm" value="Delete"/>
-                                    </form></td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js "></script>

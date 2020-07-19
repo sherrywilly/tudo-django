@@ -1,5 +1,5 @@
 from django import forms
-from app.views import home
+from app.models import Crud
 
 class CrudForm(forms.ModelForm):
     
